@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49D9923C1564C3C9006F5D90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923B1564C3C9006F5D90 /* UIKit.framework */; };
+		49D9923E1564C3C9006F5D90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923D1564C3C9006F5D90 /* Foundation.framework */; };
+		49D992401564C3C9006F5D90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */; };
+		49D992421564C3C9006F5D90 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D992411564C3C9006F5D90 /* CoreData.framework */; };
+		49D992481564C3C9006F5D90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49D992461564C3C9006F5D90 /* InfoPlist.strings */; };
+		49D9924A1564C3C9006F5D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D992491564C3C9006F5D90 /* main.m */; };
+		49D9924E1564C3C9006F5D90 /* TFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */; };
+		49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49D992371564C3C9006F5D90 /* threeforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threeforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D9923B1564C3C9006F5D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49D9923D1564C3C9006F5D90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49D992411564C3C9006F5D90 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		49D992451564C3C9006F5D90 /* threeforms-Info.plist */ = {isa = PBXFileReference; path = "threeforms-Info.plist"; sourceTree = "<group>"; };
+		49D992471564C3C9006F5D90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49D992491564C3C9006F5D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49D9924B1564C3C9006F5D90 /* threeforms-Prefix.pch */ = {isa = PBXFileReference; path = "threeforms-Prefix.pch"; sourceTree = "<group>"; };
+		49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */ = {isa = PBXFileReference; path = TFAppDelegate.h; sourceTree = "<group>"; };
+		49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAppDelegate.m; sourceTree = "<group>"; };
+		49D992501564C3C9006F5D90 /* threeforms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = threeforms.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49D992341564C3C9006F5D90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D9923C1564C3C9006F5D90 /* UIKit.framework in Frameworks */,
+				49D9923E1564C3C9006F5D90 /* Foundation.framework in Frameworks */,
+				49D992401564C3C9006F5D90 /* CoreGraphics.framework in Frameworks */,
+				49D992421564C3C9006F5D90 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49D9922C1564C3C8006F5D90 = {
+			isa = PBXGroup;
+			children = (
+				49D992431564C3C9006F5D90 /* threeforms */,
+				49D9923A1564C3C9006F5D90 /* Frameworks */,
+				49D992381564C3C9006F5D90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49D992381564C3C9006F5D90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49D992371564C3C9006F5D90 /* threeforms.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49D9923A1564C3C9006F5D90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49D9923B1564C3C9006F5D90 /* UIKit.framework */,
+				49D9923D1564C3C9006F5D90 /* Foundation.framework */,
+				49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */,
+				49D992411564C3C9006F5D90 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49D992431564C3C9006F5D90 /* threeforms */ = {
+			isa = PBXGroup;
+			children = (
+				49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */,
+				49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */,
+				49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */,
+				49D992441564C3C9006F5D90 /* Supporting Files */,
+			);
+			path = threeforms;
+			sourceTree = "<group>";
+		};
+		49D992441564C3C9006F5D90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49D992451564C3C9006F5D90 /* threeforms-Info.plist */,
+				49D992461564C3C9006F5D90 /* InfoPlist.strings */,
+				49D992491564C3C9006F5D90 /* main.m */,
+				49D9924B1564C3C9006F5D90 /* threeforms-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49D992361564C3C9006F5D90 /* threeforms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D992541564C3C9006F5D90 /* Build configuration list for PBXNativeTarget "threeforms" */;
+			buildPhases = (
+				49D992331564C3C9006F5D90 /* Sources */,
+				49D992341564C3C9006F5D90 /* Frameworks */,
+				49D992351564C3C9006F5D90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = threeforms;
+			productName = threeforms;
+			productReference = 49D992371564C3C9006F5D90 /* threeforms.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49D9922E1564C3C8006F5D90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 49D992311564C3C8006F5D90 /* Build configuration list for PBXProject "threeforms" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49D9922C1564C3C8006F5D90;
+			productRefGroup = 49D992381564C3C9006F5D90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49D992361564C3C9006F5D90 /* threeforms */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49D992351564C3C9006F5D90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D992481564C3C9006F5D90 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49D992331564C3C9006F5D90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D9924A1564C3C9006F5D90 /* main.m in Sources */,
+				49D9924E1564C3C9006F5D90 /* TFAppDelegate.m in Sources */,
+				49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49D992461564C3C9006F5D90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49D992471564C3C9006F5D90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49D992521564C3C9006F5D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49D992531564C3C9006F5D90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49D992551564C3C9006F5D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "threeforms/threeforms-Prefix.pch";
+				INFOPLIST_FILE = "threeforms/threeforms-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49D992561564C3C9006F5D90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "threeforms/threeforms-Prefix.pch";
+				INFOPLIST_FILE = "threeforms/threeforms-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49D992311564C3C8006F5D90 /* Build configuration list for PBXProject "threeforms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D992521564C3C9006F5D90 /* Debug */,
+				49D992531564C3C9006F5D90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D992541564C3C9006F5D90 /* Build configuration list for PBXNativeTarget "threeforms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D992551564C3C9006F5D90 /* Debug */,
+				49D992561564C3C9006F5D90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49D992501564C3C9006F5D90 /* threeforms.xcdatamodel */,
+			);
+			currentVersion = 49D992501564C3C9006F5D90 /* threeforms.xcdatamodel */;
+			path = threeforms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49D9922E1564C3C8006F5D90 /* Project object */;
+}
