@@ -15,6 +15,8 @@
 		49D9924A1564C3C9006F5D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D992491564C3C9006F5D90 /* main.m */; };
 		49D9924E1564C3C9006F5D90 /* TFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */; };
 		49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */; };
+		49D9925B1564C3F4006F5D90 /* TFContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D992571564C3F4006F5D90 /* TFContentScrollView.m */; };
+		49D9925C1564C3F4006F5D90 /* TFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D9925A1564C3F4006F5D90 /* TFMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +25,17 @@
 		49D9923D1564C3C9006F5D90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		49D992411564C3C9006F5D90 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		49D992451564C3C9006F5D90 /* threeforms-Info.plist */ = {isa = PBXFileReference; path = "threeforms-Info.plist"; sourceTree = "<group>"; };
+		49D992451564C3C9006F5D90 /* threeforms-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "threeforms-Info.plist"; sourceTree = "<group>"; };
 		49D992471564C3C9006F5D90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49D992491564C3C9006F5D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49D9924B1564C3C9006F5D90 /* threeforms-Prefix.pch */ = {isa = PBXFileReference; path = "threeforms-Prefix.pch"; sourceTree = "<group>"; };
-		49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */ = {isa = PBXFileReference; path = TFAppDelegate.h; sourceTree = "<group>"; };
+		49D9924B1564C3C9006F5D90 /* threeforms-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "threeforms-Prefix.pch"; sourceTree = "<group>"; };
+		49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAppDelegate.h; sourceTree = "<group>"; };
 		49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAppDelegate.m; sourceTree = "<group>"; };
 		49D992501564C3C9006F5D90 /* threeforms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = threeforms.xcdatamodel; sourceTree = "<group>"; };
+		49D992571564C3F4006F5D90 /* TFContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFContentScrollView.m; sourceTree = "<group>"; };
+		49D992581564C3F4006F5D90 /* TFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFMainViewController.h; sourceTree = "<group>"; };
+		49D992591564C3F4006F5D90 /* TFContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFContentScrollView.h; sourceTree = "<group>"; };
+		49D9925A1564C3F4006F5D90 /* TFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +84,14 @@
 		49D992431564C3C9006F5D90 /* threeforms */ = {
 			isa = PBXGroup;
 			children = (
+				49D992441564C3C9006F5D90 /* Supporting Files */,
 				49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */,
 				49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */,
+				49D992591564C3F4006F5D90 /* TFContentScrollView.h */,
+				49D992571564C3F4006F5D90 /* TFContentScrollView.m */,
+				49D992581564C3F4006F5D90 /* TFMainViewController.h */,
+				49D9925A1564C3F4006F5D90 /* TFMainViewController.m */,
 				49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */,
-				49D992441564C3C9006F5D90 /* Supporting Files */,
 			);
 			path = threeforms;
 			sourceTree = "<group>";
@@ -161,6 +171,8 @@
 				49D9924A1564C3C9006F5D90 /* main.m in Sources */,
 				49D9924E1564C3C9006F5D90 /* TFAppDelegate.m in Sources */,
 				49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */,
+				49D9925B1564C3F4006F5D90 /* TFContentScrollView.m in Sources */,
+				49D9925C1564C3F4006F5D90 /* TFMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +276,7 @@
 				49D992561564C3C9006F5D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
