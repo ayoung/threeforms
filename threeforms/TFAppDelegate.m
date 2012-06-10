@@ -8,6 +8,11 @@
 
 #import "TFAppDelegate.h"
 #import "TFMainViewController.h"
+#import "TFDocumentsViewController.h"
+
+@interface TFAppDelegate (private)
+-(UINavigationController *) createDocumentsNavigationController;
+@end
 
 @implementation TFAppDelegate
 
@@ -21,8 +26,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
     _mainViewController = [[TFMainViewController alloc] init];
+    [self createDocumentsNavigationController];
+    
     [self.window addSubview: _mainViewController.view];
+    [self.window addSubview: _menuNavController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -80,6 +89,14 @@
             abort();
         } 
     }
+}
+
+-(UINavigationController *)createDocumentsNavigationController
+{
+    TFDocumentsViewController *documentsViewController = [[TFDocumentsViewController alloc] init];
+    _menuNavController = [[UINavigationController alloc] initWithRootViewController:documentsViewController];
+    [_menuNavController setNavigationBarHidden:true];
+    return _menuNavController;
 }
 
 #pragma mark - Core Data stack

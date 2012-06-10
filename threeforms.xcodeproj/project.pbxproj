@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4970F6771584684A00DE22B6 /* TFDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970F6761584684A00DE22B6 /* TFDocumentsViewController.m */; };
+		4970F67C15846A7900DE22B6 /* TFDocumentsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970F67B15846A7900DE22B6 /* TFDocumentsTableView.m */; };
 		49D9923C1564C3C9006F5D90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923B1564C3C9006F5D90 /* UIKit.framework */; };
 		49D9923E1564C3C9006F5D90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923D1564C3C9006F5D90 /* Foundation.framework */; };
 		49D992401564C3C9006F5D90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4970F6751584684A00DE22B6 /* TFDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDocumentsViewController.h; sourceTree = "<group>"; };
+		4970F6761584684A00DE22B6 /* TFDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDocumentsViewController.m; sourceTree = "<group>"; };
+		4970F67A15846A7900DE22B6 /* TFDocumentsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDocumentsTableView.h; sourceTree = "<group>"; };
+		4970F67B15846A7900DE22B6 /* TFDocumentsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDocumentsTableView.m; sourceTree = "<group>"; };
 		49D992371564C3C9006F5D90 /* threeforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threeforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D9923B1564C3C9006F5D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49D9923D1564C3C9006F5D90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,9 +59,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4970F6721584618600DE22B6 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				4970F674158461BC00DE22B6 /* The Belgic Confession */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		4970F674158461BC00DE22B6 /* The Belgic Confession */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "The Belgic Confession";
+			sourceTree = "<group>";
+		};
+		4970F6791584686500DE22B6 /* Documents Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4970F6751584684A00DE22B6 /* TFDocumentsViewController.h */,
+				4970F6761584684A00DE22B6 /* TFDocumentsViewController.m */,
+				4970F67A15846A7900DE22B6 /* TFDocumentsTableView.h */,
+				4970F67B15846A7900DE22B6 /* TFDocumentsTableView.m */,
+			);
+			name = "Documents Menu";
+			sourceTree = "<group>";
+		};
 		49D9922C1564C3C8006F5D90 = {
 			isa = PBXGroup;
 			children = (
+				4970F6721584618600DE22B6 /* Documents */,
 				49D992431564C3C9006F5D90 /* threeforms */,
 				49D9923A1564C3C9006F5D90 /* Frameworks */,
 				49D992381564C3C9006F5D90 /* Products */,
@@ -92,6 +125,7 @@
 				49D992581564C3F4006F5D90 /* TFMainViewController.h */,
 				49D9925A1564C3F4006F5D90 /* TFMainViewController.m */,
 				49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */,
+				4970F6791584686500DE22B6 /* Documents Menu */,
 			);
 			path = threeforms;
 			sourceTree = "<group>";
@@ -173,6 +207,8 @@
 				49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */,
 				49D9925B1564C3F4006F5D90 /* TFContentScrollView.m in Sources */,
 				49D9925C1564C3F4006F5D90 /* TFMainViewController.m in Sources */,
+				4970F6771584684A00DE22B6 /* TFDocumentsViewController.m in Sources */,
+				4970F67C15846A7900DE22B6 /* TFDocumentsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
