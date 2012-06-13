@@ -12,6 +12,7 @@
 @interface TFDocumentsViewController : UIViewController {
 @private TFDocumentsTableView *_tableView;
 @private UIButton *_closeButton;
+@private NSString *_closeImage;
 }
 
 @end

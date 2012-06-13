@@ -14,6 +14,15 @@
 
 @implementation TFDocumentsViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _closeImage = [[NSBundle mainBundle] pathForResource:@"X" ofType:@"png"];
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,16 +57,16 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor: [[UIColor alloc] initWithWhite:0 alpha:0.85]];
-    [_closeButton setFrame:CGRectMake(250, 50, 50, 50)];
-    [_closeButton setBackgroundColor:[UIColor redColor]];
+    [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
+    [_closeButton setImage:[[UIImage alloc] initWithContentsOfFile:_closeImage] forState:UIControlStateNormal];
     [_closeButton addTarget:self action:@selector(closeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    _tableView = nil;
+    _closeButton = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
