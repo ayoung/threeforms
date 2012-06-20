@@ -48,6 +48,8 @@
 {
     [super loadView];
     _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _tableView = [[TFDocumentsTableView alloc] init];
+    [self.view addSubview:_tableView];
     [self.view addSubview:_closeButton];
 }
 
@@ -57,6 +59,15 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor: [[UIColor alloc] initWithWhite:0 alpha:0.85]];
+    
+    // setup the tableview
+    [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    [_tableView setBackgroundColor:[UIColor clearColor]];
+    [_tableView setFrame:CGRectMake(0, 0, 320, 460)];
+    [_tableView setSeparatorColor:[UIColor clearColor]];
+    [_tableView setDataSource:self];
+    
+    // setup close button
     [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
     [_closeButton setImage:[[UIImage alloc] initWithContentsOfFile:_closeImage] forState:UIControlStateNormal];
     [_closeButton addTarget:self action:@selector(closeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,7 +88,23 @@
 
 -(IBAction)closeButtonTouchUpInside:(id)sender
 {
-    [self.navigationController.view setHidden:true];
+    [UIView animateWithDuration:0.3f animations:^{
+        [self.view setAlpha:0];
+    } completion:^(BOOL finished){
+        [self.navigationController.view setHidden:true];
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
 }
 
 @end

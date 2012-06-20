@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFDocumentsTableView : UIViewController
+@interface TFDocumentsTableView : UITableView
     
 @end
