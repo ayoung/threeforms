@@ -1,0 +1,11 @@
+{
+  "name": "dataLoader"
+  , "description": "sqlite3 data ingestion script"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+    "js-yaml": "1.x.x"
+    , "sqlite3": "2.x.x"
+    , "underscore" : "1.x.x"
+  }
+}
