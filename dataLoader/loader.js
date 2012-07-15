@@ -2,15 +2,16 @@ var yaml    = require('js-yaml');
 var fs      = require('fs');
 var sqlite3 = require('sqlite3');
 var _       = require('underscore');
-var docPath = '../threeforms/Assets/Documents/The Belgic Confession';
+var docPath = './Documents/The Belgic Confession';
 var baselinedb = 'baseline.db3';
-var newdb = 'content.db3';
+var newdb = '../threeforms/Assets/db/content.db3';
 var childProcess = require('child_process');
 
+console.log('sdf');
 // refresh
 if(fs.existsSync(newdb))
   childProcess.exec('rm ' + newdb);
-
+console.log('here');
 // clone db3 file
 childProcess.exec('cp ' + baselinedb + ' ' + newdb, loadDocuments);
 
