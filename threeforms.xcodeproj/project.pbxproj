@@ -70,25 +70,9 @@
 		4903121A1588760400EBC201 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				4903121B1588760400EBC201 /* Documents */,
 				4903121D1588760400EBC201 /* images */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		4903121B1588760400EBC201 /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-				4903121C1588760400EBC201 /* The Belgic Confession */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		4903121C1588760400EBC201 /* The Belgic Confession */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "The Belgic Confession";
 			sourceTree = "<group>";
 		};
 		4903121D1588760400EBC201 /* images */ = {
