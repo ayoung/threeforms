@@ -7,12 +7,11 @@ var baselinedb = 'baseline.db3';
 var newdb = '../threeforms/Assets/db/content.db3';
 var childProcess = require('child_process');
 
-console.log('sdf');
 // refresh
 if(fs.existsSync(newdb))
   childProcess.exec('rm ' + newdb);
-console.log('here');
-// clone db3 file
+
+// clone db file
 childProcess.exec('cp ' + baselinedb + ' ' + newdb, loadDocuments);
 
 function loadDocuments(err) {
