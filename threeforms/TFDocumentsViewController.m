@@ -65,7 +65,7 @@
     [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setFrame:CGRectMake(0, 0, 320, 460)];
     [_tableView setSeparatorColor:[UIColor clearColor]];
-    [_tableView setDataSource:self];
+    //[_tableView setDataSource:self];
     
     // setup close button
     [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
