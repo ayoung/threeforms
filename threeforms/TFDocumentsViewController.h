@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TFDocumentsTableView.h"
+#import "FMDatabase.h"
+#import "FMResultSet.h"
+#import "TFResources.h"
 
-@interface TFDocumentsViewController : UIViewController <UITableViewDataSource> {
-@private TFDocumentsTableView *_tableView;
-@private UIButton *_closeButton;
-@private NSString *_closeImage;
-}
+@interface TFDocumentsViewController : UIViewController <UITableViewDataSource> 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

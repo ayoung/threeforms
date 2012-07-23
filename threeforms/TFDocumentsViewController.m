@@ -7,18 +7,27 @@
 //
 
 #import "TFDocumentsViewController.h"
+#import "TFArticle.h"
 
-@interface TFDocumentsViewController (private)
+@interface TFDocumentsViewController ()
 -(IBAction) closeButtonTouchUpInside:(id)sender;
 @end
 
-@implementation TFDocumentsViewController
+@implementation TFDocumentsViewController {
+TFDocumentsTableView *_tableView;
+UIButton *_closeButton;
+NSString *_closeImage;
+NSMutableArray *_articles;
+}
+
+NSString * const CellReuseId = @"documentCell";
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        _closeImage = [[NSBundle mainBundle] pathForResource:@"X" ofType:@"png"];
+        _articles = [[NSMutableArray alloc] init];
+        _closeImage = [TFResources pathForXImage];
     }
     return self;
 }
@@ -51,6 +60,8 @@
     _tableView = [[TFDocumentsTableView alloc] init];
     [self.view addSubview:_tableView];
     [self.view addSubview:_closeButton];
+    
+    
 }
 
 
@@ -65,12 +76,27 @@
     [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setFrame:CGRectMake(0, 0, 320, 460)];
     [_tableView setSeparatorColor:[UIColor clearColor]];
-    //[_tableView setDataSource:self];
+    [_tableView setDataSource:self];
     
     // setup close button
     [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
     [_closeButton setImage:[[UIImage alloc] initWithContentsOfFile:_closeImage] forState:UIControlStateNormal];
     [_closeButton addTarget:self action:@selector(closeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+    
+    FMDatabase *db = [FMDatabase databaseWithPath:[TFResources pathForContentDb]];
+    
+    if (![db open]) {
+        return;
+    }
+    
+    FMResultSet *results = [db executeQuery:@"select number, title from articles"];
+    
+    while ([results next]) {
+        TFArticle *article = [[TFArticle alloc] init];
+        [article setNumber:[results intForColumn:@"number"]];
+        [article setTitle:[results stringForColumn:@"title"]];
+        [_articles insertObject:article atIndex:[_articles count]];
+    }
 }
 
 - (void)viewDidUnload
@@ -99,12 +125,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellReuseId];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellReuseId];
+        
+    }
+    
+    NSUInteger row = [indexPath row];
+
+    [cell.textLabel setText: [[_articles objectAtIndex:row] title]];
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_articles count];
 }
 
 @end

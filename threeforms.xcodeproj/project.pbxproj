@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492F616B15BA89740027E770 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F616115BA89740027E770 /* FMDatabase.m */; };
+		492F616C15BA89740027E770 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F616315BA89740027E770 /* FMDatabaseAdditions.m */; };
+		492F616D15BA89740027E770 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F616515BA89740027E770 /* FMDatabasePool.m */; };
+		492F616E15BA89740027E770 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F616715BA89740027E770 /* FMDatabaseQueue.m */; };
+		492F617015BA89740027E770 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F616A15BA89740027E770 /* FMResultSet.m */; };
+		492F617515BA8B8F0027E770 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F617415BA8B8F0027E770 /* libsqlite3.0.dylib */; };
+		492F617E15BA8EA10027E770 /* TFDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F617D15BA8EA10027E770 /* TFDataAccess.m */; };
+		492F618115BA978A0027E770 /* TFResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F618015BA978A0027E770 /* TFResources.m */; };
 		4970F6771584684A00DE22B6 /* TFDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970F6761584684A00DE22B6 /* TFDocumentsViewController.m */; };
 		4970F67C15846A7900DE22B6 /* TFDocumentsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970F67B15846A7900DE22B6 /* TFDocumentsTableView.m */; };
 		4984BF5315B2A8FD005B38B7 /* content.db3 in Resources */ = {isa = PBXBuildFile; fileRef = 4984BF4815B2A7BA005B38B7 /* content.db3 */; };
@@ -14,6 +22,7 @@
 		4984BF5515B2A8FD005B38B7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984BF4B15B2A7BA005B38B7 /* back@2x.png */; };
 		4984BF5615B2A8FD005B38B7 /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984BF4C15B2A7BA005B38B7 /* X.png */; };
 		4984BF5715B2A8FD005B38B7 /* X@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984BF4D15B2A7BA005B38B7 /* X@2x.png */; };
+		49B10D7B15BD30E6001E5AFF /* TFArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B10D7A15BD30E6001E5AFF /* TFArticle.m */; };
 		49D9923C1564C3C9006F5D90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923B1564C3C9006F5D90 /* UIKit.framework */; };
 		49D9923E1564C3C9006F5D90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923D1564C3C9006F5D90 /* Foundation.framework */; };
 		49D992401564C3C9006F5D90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */; };
@@ -27,6 +36,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492F616015BA89740027E770 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		492F616115BA89740027E770 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		492F616215BA89740027E770 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		492F616315BA89740027E770 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		492F616415BA89740027E770 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		492F616515BA89740027E770 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		492F616615BA89740027E770 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		492F616715BA89740027E770 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		492F616915BA89740027E770 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		492F616A15BA89740027E770 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		492F617415BA8B8F0027E770 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		492F617C15BA8EA10027E770 /* TFDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDataAccess.h; sourceTree = "<group>"; };
+		492F617D15BA8EA10027E770 /* TFDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDataAccess.m; sourceTree = "<group>"; };
+		492F617F15BA978A0027E770 /* TFResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFResources.h; sourceTree = "<group>"; };
+		492F618015BA978A0027E770 /* TFResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFResources.m; sourceTree = "<group>"; };
 		4970F6751584684A00DE22B6 /* TFDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDocumentsViewController.h; sourceTree = "<group>"; };
 		4970F6761584684A00DE22B6 /* TFDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDocumentsViewController.m; sourceTree = "<group>"; };
 		4970F67A15846A7900DE22B6 /* TFDocumentsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDocumentsTableView.h; sourceTree = "<group>"; };
@@ -36,6 +60,8 @@
 		4984BF4B15B2A7BA005B38B7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		4984BF4C15B2A7BA005B38B7 /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 		4984BF4D15B2A7BA005B38B7 /* X@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X@2x.png"; sourceTree = "<group>"; };
+		49B10D7915BD30E6001E5AFF /* TFArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFArticle.h; sourceTree = "<group>"; };
+		49B10D7A15BD30E6001E5AFF /* TFArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFArticle.m; sourceTree = "<group>"; };
 		49D992371564C3C9006F5D90 /* threeforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threeforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D9923B1564C3C9006F5D90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49D9923D1564C3C9006F5D90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492F617515BA8B8F0027E770 /* libsqlite3.0.dylib in Frameworks */,
 				49D9923C1564C3C9006F5D90 /* UIKit.framework in Frameworks */,
 				49D9923E1564C3C9006F5D90 /* Foundation.framework in Frameworks */,
 				49D992401564C3C9006F5D90 /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +96,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492F615E15BA890D0027E770 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				49B10D7715BD306B001E5AFF /* Models */,
+				492F617615BA8CF80027E770 /* DataAccess */,
+				492F617315BA8B470027E770 /* fmdb */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		492F617315BA8B470027E770 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				492F616015BA89740027E770 /* FMDatabase.h */,
+				492F616115BA89740027E770 /* FMDatabase.m */,
+				492F616215BA89740027E770 /* FMDatabaseAdditions.h */,
+				492F616315BA89740027E770 /* FMDatabaseAdditions.m */,
+				492F616415BA89740027E770 /* FMDatabasePool.h */,
+				492F616515BA89740027E770 /* FMDatabasePool.m */,
+				492F616615BA89740027E770 /* FMDatabaseQueue.h */,
+				492F616715BA89740027E770 /* FMDatabaseQueue.m */,
+				492F616915BA89740027E770 /* FMResultSet.h */,
+				492F616A15BA89740027E770 /* FMResultSet.m */,
+			);
+			name = fmdb;
+			sourceTree = "<group>";
+		};
+		492F617615BA8CF80027E770 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				492F617C15BA8EA10027E770 /* TFDataAccess.h */,
+				492F617D15BA8EA10027E770 /* TFDataAccess.m */,
+			);
+			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		492F617A15BA8E2D0027E770 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4970F6791584686500DE22B6 /* Documents Menu */,
+				49D992591564C3F4006F5D90 /* TFContentScrollView.h */,
+				49D992571564C3F4006F5D90 /* TFContentScrollView.m */,
+				49D992581564C3F4006F5D90 /* TFMainViewController.h */,
+				49D9925A1564C3F4006F5D90 /* TFMainViewController.m */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
 		4970F6791584686500DE22B6 /* Documents Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +183,15 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		49B10D7715BD306B001E5AFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49B10D7915BD30E6001E5AFF /* TFArticle.h */,
+				49B10D7A15BD30E6001E5AFF /* TFArticle.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		49D9922C1564C3C8006F5D90 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +213,7 @@
 		49D9923A1564C3C9006F5D90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				492F617415BA8B8F0027E770 /* libsqlite3.0.dylib */,
 				49D9923B1564C3C9006F5D90 /* UIKit.framework */,
 				49D9923D1564C3C9006F5D90 /* Foundation.framework */,
 				49D9923F1564C3C9006F5D90 /* CoreGraphics.framework */,
@@ -140,15 +225,14 @@
 		49D992431564C3C9006F5D90 /* threeforms */ = {
 			isa = PBXGroup;
 			children = (
-				4970F6791584686500DE22B6 /* Documents Menu */,
+				492F615E15BA890D0027E770 /* lib */,
 				49D992441564C3C9006F5D90 /* Supporting Files */,
 				49D9924C1564C3C9006F5D90 /* TFAppDelegate.h */,
 				49D9924D1564C3C9006F5D90 /* TFAppDelegate.m */,
-				49D992591564C3F4006F5D90 /* TFContentScrollView.h */,
-				49D992571564C3F4006F5D90 /* TFContentScrollView.m */,
-				49D992581564C3F4006F5D90 /* TFMainViewController.h */,
-				49D9925A1564C3F4006F5D90 /* TFMainViewController.m */,
+				492F617F15BA978A0027E770 /* TFResources.h */,
+				492F618015BA978A0027E770 /* TFResources.m */,
 				49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */,
+				492F617A15BA8E2D0027E770 /* ui */,
 			);
 			path = threeforms;
 			sourceTree = "<group>";
@@ -254,6 +338,14 @@
 				49D9925C1564C3F4006F5D90 /* TFMainViewController.m in Sources */,
 				4970F6771584684A00DE22B6 /* TFDocumentsViewController.m in Sources */,
 				4970F67C15846A7900DE22B6 /* TFDocumentsTableView.m in Sources */,
+				492F616B15BA89740027E770 /* FMDatabase.m in Sources */,
+				492F616C15BA89740027E770 /* FMDatabaseAdditions.m in Sources */,
+				492F616D15BA89740027E770 /* FMDatabasePool.m in Sources */,
+				492F616E15BA89740027E770 /* FMDatabaseQueue.m in Sources */,
+				492F617015BA89740027E770 /* FMResultSet.m in Sources */,
+				492F617E15BA8EA10027E770 /* TFDataAccess.m in Sources */,
+				492F618115BA978A0027E770 /* TFResources.m in Sources */,
+				49B10D7B15BD30E6001E5AFF /* TFArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
