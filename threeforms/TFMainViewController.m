@@ -16,6 +16,8 @@
     if (self) {
         // Custom initialization
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(articleSelected:) name:@"Article Selected" object:nil];
     return self;
 }
 
@@ -28,7 +30,6 @@
 }
 
 #pragma mark - View lifecycle
-
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
@@ -91,6 +92,11 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) articleSelected:(NSNotification *) notiification
+{
+    NSLog(@"Article Selected: %d", 3);
 }
 
 @end

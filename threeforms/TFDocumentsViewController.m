@@ -77,6 +77,7 @@ NSString * const CellReuseId = @"documentCell";
     [_tableView setFrame:CGRectMake(0, 0, 320, 460)];
     [_tableView setSeparatorColor:[UIColor clearColor]];
     [_tableView setDataSource:self];
+    [_tableView setDelegate:self];
     
     // setup close button
     [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
@@ -128,7 +129,7 @@ NSString * const CellReuseId = @"documentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellReuseId];
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellReuseId];
-        
+        [[cell textLabel] setTextColor:[UIColor whiteColor]];
     }
     
     NSUInteger row = [indexPath row];
@@ -140,6 +141,13 @@ NSString * const CellReuseId = @"documentCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_articles count];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Article Selected" object:self userInfo: @{ @"article": [NSNumber numberWithInt:indexPath.row] }];
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "FMResultSet.h"
 #import "TFResources.h"
 
-@interface TFDocumentsViewController : UIViewController <UITableViewDataSource> 
+@interface TFDocumentsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
