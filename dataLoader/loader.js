@@ -8,11 +8,21 @@ var newdb = '../assets/db/content.db3';
 var childProcess = require('child_process');
 
 // refresh
-if(fs.existsSync(newdb))
-  childProcess.exec('rm ' + newdb);
+if(fs.existsSync(newdb)) {
+  childProcess.exec('rm ' + newdb, copyBaseLine);
+}
+else {
+  copyBaseLine();
+}
 
-// clone db file
-childProcess.exec('cp ' + baselinedb + ' ' + newdb, loadDocuments);
+function copyBaseLine(err, stdout, stderr) {
+  if(err) {
+    console.log(err);
+  }
+
+  // clone db file
+  childProcess.exec('cp ' + baselinedb + ' ' + newdb, loadDocuments);
+}
 
 function loadDocuments(err) {
   if(err) {
@@ -27,12 +37,21 @@ function loadDocuments(err) {
     if(file === '.DS_Store')
       return;
 
-    console.log('Processing: ' + file);
-
     var doc = require(docPath + '/' + file);
     db.run("insert into articles (number, title, text) values (?, ?, ?);",
-      doc.article, doc.title, doc.text);
+      doc.article, doc.title, doc.text, ran(file));
   });
 
   db.close();
+}
+
+function ran(file) {
+  return function(err) {
+    console.log('Processing: ' + file);
+
+    if(err) {
+      console.log(err);
+      return;
+    }
+  }
 }
