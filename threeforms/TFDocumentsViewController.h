@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TFDocumentsTableView.h"
-#import "FMDatabase.h"
-#import "FMResultSet.h"
 #import "TFResources.h"
 
 @interface TFDocumentsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>

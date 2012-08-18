@@ -7,6 +7,8 @@
 //
 
 #import "TFMainViewController.h"
+#import "TFDataAccess.h"
+#import "TFArticle.h"
 
 @implementation TFMainViewController
 
@@ -37,14 +39,14 @@
     [super loadView];
     
     _contentScrollView = [[TFContentScrollView alloc] init];
-    _scrollView1 = [[UIScrollView alloc] init];
-    _scrollView2 = [[UIScrollView alloc] init];
-    _scrollView3 = [[UIScrollView alloc] init];
+    _leftScrollView = [[UIScrollView alloc] init];
+    _centerScrollView = [[UIScrollView alloc] init];
+    _rightScrollView = [[UIScrollView alloc] init];
     
     [self.view addSubview:_contentScrollView];
-    [_contentScrollView addSubview:_scrollView1];
-    [_contentScrollView addSubview:_scrollView2];
-    [_contentScrollView addSubview:_scrollView3];
+    [_contentScrollView addSubview:_leftScrollView];
+    [_contentScrollView addSubview:_centerScrollView];
+    [_contentScrollView addSubview:_rightScrollView];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -62,18 +64,18 @@
     [_contentScrollView setShowsVerticalScrollIndicator:FALSE];
     [_contentScrollView setContentSize:CGSizeMake(size.width*3, size.height)];
     
-    [_scrollView1 setFrame:CGRectMake(0, 0, size.width, size.height)];
-    [_scrollView2 setFrame:CGRectMake(size.width, 0, size.width, size.height)];
-    [_scrollView3 setFrame:CGRectMake(size.width * 2, 0, size.width, size.height)];
+    [_leftScrollView setFrame:CGRectMake(0, 0, size.width, size.height)];
+    [_centerScrollView setFrame:CGRectMake(size.width, 0, size.width, size.height)];
+    [_rightScrollView setFrame:CGRectMake(size.width * 2, 0, size.width, size.height)];
 
     CGSize innerSize = CGSizeMake([_contentScrollView frame].size.width, 2500);
-    [_scrollView1 setContentSize:innerSize];
-    [_scrollView2 setContentSize:innerSize];
-    [_scrollView3 setContentSize:innerSize];
+    [_leftScrollView setContentSize:innerSize];
+    [_centerScrollView setContentSize:innerSize];
+    [_rightScrollView setContentSize:innerSize];
     
-    [_scrollView1 setBackgroundColor:[[UIColor alloc] initWithRed:1 green:0 blue:0 alpha:1]];
-    [_scrollView2 setBackgroundColor:[[UIColor alloc] initWithRed:0 green:2 blue:0 alpha:1]];
-    [_scrollView3 setBackgroundColor:[[UIColor alloc] initWithRed:0 green:0 blue:3 alpha:1]];
+    [_leftScrollView setBackgroundColor:[[UIColor alloc] initWithRed:1 green:0 blue:0 alpha:1]];
+    [_centerScrollView setBackgroundColor:[[UIColor alloc] initWithRed:0 green:2 blue:0 alpha:1]];
+    [_rightScrollView setBackgroundColor:[[UIColor alloc] initWithRed:0 green:0 blue:3 alpha:1]];
     
 }
 
@@ -83,9 +85,9 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     _contentScrollView = nil;
-    _scrollView1 = nil;
-    _scrollView2 = nil;
-    _scrollView3 = nil;
+    _leftScrollView = nil;
+    _centerScrollView = nil;
+    _rightScrollView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -94,9 +96,17 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) articleSelected:(NSNotification *) notiification
+- (void) articleSelected:(NSNotification *) notification
 {
-    NSLog(@"Article Selected: %d", 3);
+    NSNumber *articleNumber = [[notification userInfo] valueForKey:@"article"];
+    [self loadArticle:articleNumber];
+}
+
+- (void) loadArticle:(NSNumber*)articleNumber
+{
+    NSMutableArray *articles = [TFDataAccess getArticlesList];
+    TFArticle *article = [articles objectAtIndex:[articleNumber integerValue]];
+    NSLog(@"Article Selected: %@", [article title]);
 }
 
 @end

@@ -12,5 +12,6 @@
 
 @property NSInteger number;
 @property NSString *title;
+@property NSString *text;
 
 @end

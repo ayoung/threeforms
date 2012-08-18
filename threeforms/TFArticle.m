@@ -10,6 +10,6 @@
 
 @implementation TFArticle
 
-@synthesize number, title;
+@synthesize number, title, text;
 
 @end

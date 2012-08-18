@@ -8,16 +8,17 @@
 
 #import "TFDocumentsViewController.h"
 #import "TFArticle.h"
+#import "TFDataAccess.h"
 
 @interface TFDocumentsViewController ()
 -(IBAction) closeButtonTouchUpInside:(id)sender;
 @end
 
 @implementation TFDocumentsViewController {
-TFDocumentsTableView *_tableView;
-UIButton *_closeButton;
-NSString *_closeImage;
-NSMutableArray *_articles;
+    TFDocumentsTableView *_tableView;
+    UIButton *_closeButton;
+    NSString *_closeImage;
+    NSMutableArray *_articlesList;
 }
 
 NSString * const CellReuseId = @"documentCell";
@@ -26,7 +27,6 @@ NSString * const CellReuseId = @"documentCell";
 {
     self = [super init];
     if (self) {
-        _articles = [[NSMutableArray alloc] init];
         _closeImage = [TFResources pathForXImage];
     }
     return self;
@@ -60,8 +60,6 @@ NSString * const CellReuseId = @"documentCell";
     _tableView = [[TFDocumentsTableView alloc] init];
     [self.view addSubview:_tableView];
     [self.view addSubview:_closeButton];
-    
-    
 }
 
 
@@ -83,21 +81,7 @@ NSString * const CellReuseId = @"documentCell";
     [_closeButton setFrame:CGRectMake(290, 10, 20, 20)];
     [_closeButton setImage:[[UIImage alloc] initWithContentsOfFile:_closeImage] forState:UIControlStateNormal];
     [_closeButton addTarget:self action:@selector(closeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-    
-    FMDatabase *db = [FMDatabase databaseWithPath:[TFResources pathForContentDb]];
-    
-    if (![db open]) {
-        return;
-    }
-    
-    FMResultSet *results = [db executeQuery:@"select number, title from articles"];
-    
-    while ([results next]) {
-        TFArticle *article = [[TFArticle alloc] init];
-        [article setNumber:[results intForColumn:@"number"]];
-        [article setTitle:[results stringForColumn:@"title"]];
-        [_articles insertObject:article atIndex:[_articles count]];
-    }
+    _articlesList = [TFDataAccess getArticlesList];
 }
 
 - (void)viewDidUnload
@@ -134,20 +118,20 @@ NSString * const CellReuseId = @"documentCell";
     
     NSUInteger row = [indexPath row];
 
-    [cell.textLabel setText: [[_articles objectAtIndex:row] title]];
+    [cell.textLabel setText: [[_articlesList objectAtIndex:row] title]];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_articles count];
+    return [_articlesList count];
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"Article Selected" object:self userInfo: @{ @"article": [NSNumber numberWithInt:indexPath.row] }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Article Selected" object:self userInfo: @{ @"article": [NSNumber numberWithInt:indexPath.row+1] }];
 }
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TFArticle.h"
 
 @interface TFDataAccess : NSObject
+
++(NSMutableArray*) getArticlesList;
 
 @end
