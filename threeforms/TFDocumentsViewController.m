@@ -131,7 +131,7 @@ NSString * const CellReuseId = @"documentCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"Article Selected" object:self userInfo: @{ @"article": [NSNumber numberWithInt:indexPath.row+1] }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Article Selected" object:self userInfo: @{ @"article": [NSNumber numberWithInt:indexPath.row] }];
 }
 
 @end

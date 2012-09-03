@@ -33,6 +33,7 @@
 		49D992511564C3C9006F5D90 /* threeforms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49D9924F1564C3C9006F5D90 /* threeforms.xcdatamodeld */; };
 		49D9925B1564C3F4006F5D90 /* TFContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D992571564C3F4006F5D90 /* TFContentScrollView.m */; };
 		49D9925C1564C3F4006F5D90 /* TFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D9925A1564C3F4006F5D90 /* TFMainViewController.m */; };
+		F2F5B59C15EB471400E5297E /* TFBCArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B59B15EB471400E5297E /* TFBCArticleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		49D992581564C3F4006F5D90 /* TFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFMainViewController.h; sourceTree = "<group>"; };
 		49D992591564C3F4006F5D90 /* TFContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFContentScrollView.h; sourceTree = "<group>"; };
 		49D9925A1564C3F4006F5D90 /* TFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFMainViewController.m; sourceTree = "<group>"; };
+		F2F5B59A15EB471400E5297E /* TFBCArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFBCArticleView.h; sourceTree = "<group>"; };
+		F2F5B59B15EB471400E5297E /* TFBCArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFBCArticleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 		492F617A15BA8E2D0027E770 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				F2F5B59815EB465F00E5297E /* Document Templates */,
 				4970F6791584686500DE22B6 /* Documents Menu */,
 				49D992591564C3F4006F5D90 /* TFContentScrollView.h */,
 				49D992571564C3F4006F5D90 /* TFContentScrollView.m */,
@@ -248,6 +252,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F2F5B59815EB465F00E5297E /* Document Templates */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5B59A15EB471400E5297E /* TFBCArticleView.h */,
+				F2F5B59B15EB471400E5297E /* TFBCArticleView.m */,
+			);
+			name = "Document Templates";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +359,7 @@
 				492F617E15BA8EA10027E770 /* TFDataAccess.m in Sources */,
 				492F618115BA978A0027E770 /* TFResources.m in Sources */,
 				49B10D7B15BD30E6001E5AFF /* TFArticle.m in Sources */,
+				F2F5B59C15EB471400E5297E /* TFBCArticleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

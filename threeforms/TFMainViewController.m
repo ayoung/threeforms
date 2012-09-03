@@ -9,8 +9,20 @@
 #import "TFMainViewController.h"
 #import "TFDataAccess.h"
 #import "TFArticle.h"
+#import "TFBCArticleView.h"
 
 @implementation TFMainViewController
+{
+    UIScrollView *_leftScrollView;
+    UIScrollView *_centerScrollView;
+    UIScrollView *_rightScrollView;
+    TFBCArticleView *_leftContentView;
+    TFBCArticleView *_centerContentView;
+    TFBCArticleView *_rightContentView;
+    TFContentScrollView *_contentScrollView;
+    NSNumber *_selectedArticleNumber;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,14 +51,24 @@
     [super loadView];
     
     _contentScrollView = [[TFContentScrollView alloc] init];
+    
     _leftScrollView = [[UIScrollView alloc] init];
     _centerScrollView = [[UIScrollView alloc] init];
     _rightScrollView = [[UIScrollView alloc] init];
     
+    _leftContentView = [[TFBCArticleView alloc] init];
+    _centerContentView = [[TFBCArticleView alloc] init];
+    _rightContentView = [[TFBCArticleView alloc] init];
+    
     [self.view addSubview:_contentScrollView];
+    
     [_contentScrollView addSubview:_leftScrollView];
     [_contentScrollView addSubview:_centerScrollView];
     [_contentScrollView addSubview:_rightScrollView];
+    
+    [_leftScrollView addSubview:_leftContentView];
+    [_centerScrollView addSubview:_centerContentView];
+    [_rightScrollView addSubview:_rightContentView];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -82,10 +104,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
     _contentScrollView = nil;
-    _leftScrollView = nil;
+    _leftScrollView	 = nil;
+    _centerScrollView = nil;
+    _rightScrollView = nil;
+    _leftContentView = nil;
     _centerScrollView = nil;
     _rightScrollView = nil;
 }
@@ -98,15 +122,46 @@
 
 - (void) articleSelected:(NSNotification *) notification
 {
-    NSNumber *articleNumber = [[notification userInfo] valueForKey:@"article"];
-    [self loadArticle:articleNumber];
+    _selectedArticleNumber = [[notification userInfo] valueForKey:@"article"];
+    [self loadArticle];
 }
 
-- (void) loadArticle:(NSNumber*)articleNumber
+- (void) loadArticle
 {
     NSMutableArray *articles = [TFDataAccess getArticlesList];
-    TFArticle *article = [articles objectAtIndex:[articleNumber integerValue]];
-    NSLog(@"Article Selected: %@", [article title]);
+    TFArticle *leftArticle;
+    TFArticle *centerArticle;
+    TFArticle *rightArticle;
+    
+    // first article selected
+    if ([_selectedArticleNumber integerValue] == 0) {
+        leftArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue]];
+        centerArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] + 1];
+        rightArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] + 2];
+    }
+    // last article selected
+    else if([_selectedArticleNumber integerValue] == [articles count]) {
+        leftArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] - 2];
+        centerArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] - 1];
+        rightArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue]];
+    }
+    // something in the middle selected
+    else {
+        leftArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] - 1];
+        centerArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue]];
+        rightArticle = [articles objectAtIndex:[_selectedArticleNumber integerValue] + 1];
+    }
+    
+    NSLog(@"Article Selected: %@", [centerArticle title]);
+
+    [_leftContentView loadWithArticle:leftArticle];
+    [_leftContentView setFrame:CGRectMake(0, 0, 320, 460)];
+    
+    [_centerContentView loadWithArticle:centerArticle];
+    [_centerContentView setFrame:CGRectMake(0, 0, 320, 460)];
+    
+    [_rightContentView loadWithArticle:rightArticle];
+    [_rightContentView setFrame:CGRectMake(0, 0, 320, 460)];
 }
 
 @end

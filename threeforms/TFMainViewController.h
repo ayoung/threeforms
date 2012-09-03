@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TFContentScrollView.h"
 
-@interface TFMainViewController : UIViewController {
-    @private UIScrollView *_leftScrollView;
-    @private UIScrollView *_centerScrollView;
-    @private UIScrollView *_rightScrollView;
-    @private TFContentScrollView *_contentScrollView;
-}
+@interface TFMainViewController : UIViewController
 
 @end
